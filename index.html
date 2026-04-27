@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | Agro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="top-bar">
+        <button id="btn-theme">🌓 Alternar Tema</button>
+        <button id="btn-reset">🔄 Reiniciar</button>
+    </div>
+
+    <header>
+        <nav>
+            <h1 class="logo">AGRINHO<span>2026</span></h1>
+            <ul class="menu">
+                <li><a href="#suporte">Suporte</a></li>
+                <li><a href="#galeria">Tecnologias</a></li>
+                <li><a href="#quiz">Desafio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Agro Forte, Futuro Sustentável</h2>
+                <p>"Equilíbrio entre produção e meio ambiente"</p>
+            </div>
+        </section>
+
+        <section id="suporte" class="section-card">
+            <h3>Central de Dúvidas Agrinho</h3>
+            <p>Selecione um problema comum no campo para ver a solução tecnológica:</p>
+            <div id="lista-problemas" class="grid-botoes"></div>
+            <div id="painel-resposta" class="resposta-box">
+                <p id="texto-resposta">Clique em um problema acima para descobrir a solução sustentável.</p>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-card">
+            <h3>Tecnologias do Futuro</h3>
+            <div class="grid-imagens">
+                <figure class="item-foto">
+                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=400&q=80" alt="Drones">
+                    <figcaption>Drones de Precisão</figcaption>
+                </figure>
+                <figure class="item-foto">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80" alt="Hidroponia">
+                    <figcaption>Hidroponia Inteligente</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="quiz" class="section-card">
+            <h3>Desafio Sustentável</h3>
+            <p>O uso de drones ajuda a reduzir o uso de agrotóxicos?</p>
+            <div class="botoes-quiz">
+                <button onclick="responderQuiz(true)">Sim, pela aplicação precisa</button>
+                <button onclick="responderQuiz(false)">Não, drones não ajudam</button>
+            </div>
+            <p id="res-quiz"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Estudantil Agrinho - Autoral</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
