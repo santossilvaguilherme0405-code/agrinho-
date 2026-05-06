@@ -9,8 +9,8 @@
 <body>
 
     <div id="top-bar">
-        <button id="btn-theme">🌓 Alternar Tema</button>
-        <button id="btn-reset">🔄 Reiniciar</button>
+        <button id="btn-theme" class="btn-topo">🌓 Alternar Tema</button>
+        <button id="btn-reset" class="btn-topo">🔄 Reiniciar</button>
     </div>
 
     <header>
@@ -43,31 +43,40 @@
 
         <section id="galeria" class="section-card">
             <h3>Tecnologias do Futuro</h3>
+            <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">Clique na imagem para expandir a informação:</p>
             <div class="grid-imagens">
-                <figure class="item-foto">
-                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=400&q=80" alt="Drones">
+                <figure class="item-foto" onclick="exibirInfo('drone')">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=400" alt="Drones">
                     <figcaption>Drones de Precisão</figcaption>
                 </figure>
-                <figure class="item-foto">
-                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80" alt="Hidroponia">
+                <figure class="item-foto" onclick="exibirInfo('hidro')">
+                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=400" alt="Hidroponia">
                     <figcaption>Hidroponia Inteligente</figcaption>
                 </figure>
+                <figure class="item-foto" onclick="exibirInfo('solar')">
+                    <img src="https://images.unsplash.com/photo-1509391366360-fe5bb58583bb?w=400" alt="Energia Solar">
+                    <figcaption>Energia Limpa</figcaption>
+                </figure>
+            </div>
+            <div id="detalhe-galeria" class="resposta-box" style="display:none; margin-top:20px;">
+                <h4 id="detalhe-titulo"></h4>
+                <p id="detalhe-texto"></p>
             </div>
         </section>
 
         <section id="quiz" class="section-card">
             <h3>Desafio Sustentável</h3>
             <p>O uso de drones ajuda a reduzir o uso de agrotóxicos?</p>
-            <div class="botoes-quiz">
-                <button onclick="responderQuiz(true)">Sim, pela aplicação precisa</button>
-                <button onclick="responderQuiz(false)">Não, drones não ajudam</button>
+            <div class="quiz-botoes">
+                <button class="btn-problema" onclick="responderQuiz(true)">Sim, pela aplicação precisa</button>
+                <button class="btn-problema" onclick="responderQuiz(false)">Não, drones não ajudam</button>
             </div>
-            <p id="res-quiz"></p>
+            <p id="res-quiz" style="margin-top:15px; font-weight:bold;"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Projeto Estudantil Agrinho - Autoral</p>
+        <p>&copy; 2026 - Projeto Estudantil Agrinho - Inovação e Campo</p>
     </footer>
 
     <script src="script.js"></script>
